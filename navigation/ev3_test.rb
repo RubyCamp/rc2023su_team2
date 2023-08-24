@@ -1,4 +1,6 @@
 require_relative 'ruby-ev3/lib/ev3'
+require 'dxruby'
+require_relative 'map'
 
 COLOR_SENSOR = "2"
 LEFT_MOTOR = "C"
@@ -140,14 +142,24 @@ new_color_list.push color_list_3
 p new_color_list
 
 
-
-
-
-
-
-
 puts "closing..."
 brick.stop(true, *motors)
 brick.clear_all
 brick.disconnect
 puts "finished..."
+
+
+Window.width = 800
+Window.height = 600
+
+map = Map.new(new_color_list)
+
+
+Window.loop do
+  break if Input.key_push?(K_ESCAPE)
+
+  map.update
+  map.draw
+
+end
+
