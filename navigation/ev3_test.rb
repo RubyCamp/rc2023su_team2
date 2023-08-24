@@ -22,7 +22,20 @@ sleep 0.6
 brick.stop(true, *motors)
 
 cnt = 0
-puts brick.get_sensor(COLOR_SENSOR, 2)
+color_list_1<< brick.get_sensor(COLOR_SENSOR, 2)
+
+brick.start(MOTOR_SPEED, *motors)
+sleep 0.6
+brick.stop(true, *motors)
+
+cnt = 0
+color_list_1<< brick.get_sensor(COLOR_SENSOR, 2)
+
+brick.start(MOTOR_SPEED, *motors)
+sleep 0.6
+brick.stop(true, *motors)
+
+cnt = 0
 
 color_list_1<< brick.get_sensor(COLOR_SENSOR, 2)
 
@@ -31,25 +44,6 @@ sleep 0.6
 brick.stop(true, *motors)
 
 cnt = 0
-puts brick.get_sensor(COLOR_SENSOR, 2)
-
-color_list_1<< brick.get_sensor(COLOR_SENSOR, 2)
-
-brick.start(MOTOR_SPEED, *motors)
-sleep 0.6
-brick.stop(true, *motors)
-
-cnt = 0
-puts brick.get_sensor(COLOR_SENSOR, 2)
-
-color_list_1<< brick.get_sensor(COLOR_SENSOR, 2)
-
-brick.start(MOTOR_SPEED, *motors)
-sleep 0.6
-brick.stop(true, *motors)
-
-cnt = 0
-puts brick.get_sensor(COLOR_SENSOR, 2)
 
 color_list_1<< brick.get_sensor(COLOR_SENSOR, 2)
 
@@ -62,7 +56,7 @@ sleep 0.6
 brick.stop(true, *motors)
 
 cnt = 0
-puts brick.get_sensor(COLOR_SENSOR, 2)
+
 
 color_list_2<< brick.get_sensor(COLOR_SENSOR, 2)
 
@@ -71,7 +65,6 @@ sleep 0.6
 brick.stop(true, *motors)
 
 cnt = 0
-puts brick.get_sensor(COLOR_SENSOR, 2)
 
 color_list_2<< brick.get_sensor(COLOR_SENSOR, 2)
 
@@ -80,7 +73,7 @@ sleep 0.6
 brick.stop(true, *motors)
 
 cnt = 0
-puts brick.get_sensor(COLOR_SENSOR, 2)
+
 
 color_list_2<< brick.get_sensor(COLOR_SENSOR, 2)
 
@@ -89,7 +82,6 @@ sleep 0.6
 brick.stop(true, *motors)
 
 cnt = 0
-puts brick.get_sensor(COLOR_SENSOR, 2)
 
 color_list_2<< brick.get_sensor(COLOR_SENSOR, 2)
 
@@ -101,7 +93,6 @@ sleep 0.6
 brick.stop(true, *motors)
 
 cnt = 0
-puts brick.get_sensor(COLOR_SENSOR, 2)
 
 color_list_3<< brick.get_sensor(COLOR_SENSOR, 2)
 
@@ -110,7 +101,7 @@ sleep 0.6
 brick.stop(true, *motors)
 
 cnt = 0
-puts brick.get_sensor(COLOR_SENSOR, 2)
+
 
 color_list_3<< brick.get_sensor(COLOR_SENSOR, 2)
 
@@ -119,7 +110,7 @@ sleep 0.6
 brick.stop(true, *motors)
 
 cnt = 0
-puts brick.get_sensor(COLOR_SENSOR, 2)
+
 
 color_list_3<< brick.get_sensor(COLOR_SENSOR, 2)
 
@@ -128,11 +119,11 @@ sleep 0.6
 brick.stop(true, *motors)
 
 cnt = 0
-puts brick.get_sensor(COLOR_SENSOR, 2)
+
 
 color_list_3<< brick.get_sensor(COLOR_SENSOR, 2)
 
-color_list<< brick.get_sensor(COLOR_SENSOR, 2)
+
 # 回転
 
 brick.start(MOTOR_SPEED,LEFT_MOTOR)
@@ -140,16 +131,15 @@ sleep 1.6
 brick.stop(true, *motors)
 
 #color_listの表示
-print color_list_1
-print color_list_2
-print color_list_3
 
 new_color_list=[]
+
 new_color_list.push color_list_1
 new_color_list.push color_list_2
 new_color_list.push color_list_3
-
 p new_color_list
+
+
 
 
 
